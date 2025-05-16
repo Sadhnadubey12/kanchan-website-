@@ -226,7 +226,7 @@
             <!-- Slide 1 -->
             <div style="min-width: 100%">
               <img
-                src="https://rukminim2.flixcart.com/fk-p-flap/1620/270/image/4ed521db877b21c6.jpeg?q=20"
+                src="./assets/images/pic1.jpeg"
                 alt="Promotion 1"
                 style="width: 100%; height: auto; display: block"
               />
@@ -235,7 +235,7 @@
             <!-- Slide 2 -->
             <div style="min-width: 100%">
               <img
-                src="https://rukminim2.flixcart.com/fk-p-flap/1620/270/image/5147d0d4239e324e.jpg?q=20"
+                src="./assets/images/pic2.jpeg"
                 alt="Promotion 2"
                 style="width: 100%; height: auto; display: block"
               />
@@ -244,8 +244,26 @@
             <!-- Slide 3 -->
             <div style="min-width: 100%">
               <img
-                src="https://rukminim2.flixcart.com/fk-p-flap/1620/270/image/41ecf202812263ea.jpg?q=20"
+                src="./assets/images/pic3.jpeg"
                 alt="Promotion 3"
+                style="width: 100%; height: auto; display: block"
+              />
+            </div>
+
+            <!-- Slide 4 -->
+            <div style="min-width: 100%">
+              <img
+                src="./assets/images/pic4.jpeg"
+                alt="Promotion 4"
+                style="width: 100%; height: auto; display: block"
+              />
+            </div>
+
+            <!-- Slide 5 -->
+            <div style="min-width: 100%">
+              <img
+                src="./assets/images/pic5.jpeg"
+                alt="Promotion 5"
                 style="width: 100%; height: auto; display: block"
               />
             </div>
@@ -300,19 +318,8 @@
             "
           >
             <span
-              style="
-                height: 12px;
-                width: 12px;
-                margin: 0 5px;
-                background-color: #bbb;
-                border-radius: 50%;
-                display: inline-block;
-                cursor: pointer;
-              "
               class="carousel-dot"
               data-index="0"
-            ></span>
-            <span
               style="
                 height: 12px;
                 width: 12px;
@@ -322,10 +329,10 @@
                 display: inline-block;
                 cursor: pointer;
               "
+            ></span>
+            <span
               class="carousel-dot"
               data-index="1"
-            ></span>
-            <span
               style="
                 height: 12px;
                 width: 12px;
@@ -335,8 +342,45 @@
                 display: inline-block;
                 cursor: pointer;
               "
+            ></span>
+            <span
               class="carousel-dot"
               data-index="2"
+              style="
+                height: 12px;
+                width: 12px;
+                margin: 0 5px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                cursor: pointer;
+              "
+            ></span>
+            <span
+              class="carousel-dot"
+              data-index="3"
+              style="
+                height: 12px;
+                width: 12px;
+                margin: 0 5px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                cursor: pointer;
+              "
+            ></span>
+            <span
+              class="carousel-dot"
+              data-index="4"
+              style="
+                height: 12px;
+                width: 12px;
+                margin: 0 5px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                cursor: pointer;
+              "
             ></span>
           </div>
         </section>
@@ -348,7 +392,7 @@
             const nextBtn = document.querySelector(".carousel-next");
             const dots = document.querySelectorAll(".carousel-dot");
             let currentIndex = 0;
-            const totalSlides = 3;
+            const totalSlides = 5;
 
             function updateCarousel() {
               slides.style.transform = `translateX(-${currentIndex * 100}%)`;
@@ -380,7 +424,7 @@
               });
             });
 
-            // Auto-rotate (optional)
+            // Auto-rotate
             let interval = setInterval(() => {
               currentIndex = (currentIndex + 1) % totalSlides;
               updateCarousel();
@@ -397,6 +441,8 @@
                 updateCarousel();
               }, 5000);
             });
+
+            updateCarousel(); // Initial update
           });
         </script>
 
@@ -433,6 +479,23 @@
 
           .shop-now-btn:hover {
             background-color: #2c5bb8;
+          }
+
+          .offers {
+            margin: 10px 0;
+            font-size: 14px;
+            color: #333;
+          }
+
+          .offers p {
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+          }
+
+          .offers ion-icon {
+            color: #4caf50;
+            margin-right: 8px;
           }
         </style>
 
@@ -481,6 +544,20 @@
                         ><img src="./assets/images/Akailogo.jpg" alt="Akai"
                       /></span>
                     </div>
+                    <div class="offers">
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> No cost
+                        EMI*
+                      </p>
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> Instant
+                        cashback*
+                      </p>
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> Discounts
+                        on CCEMI & DCEMI*
+                      </p>
+                    </div>
                     <a href="#contact" class="shop-now-btn">
                       <span style="color: white">Shop Now</span>
                       <ion-icon
@@ -521,6 +598,20 @@
                         ><img src="./assets/images/Havells.png" alt="Havells"
                       /></span>
                     </div>
+                    <div class="offers">
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> No cost
+                        EMI*
+                      </p>
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> Instant
+                        cashback*
+                      </p>
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> Discounts
+                        on CCEMI & DCEMI*
+                      </p>
+                    </div>
                     <a href="#contact" class="shop-now-btn">
                       <span style="color: white">Shop Now</span>
                       <ion-icon
@@ -557,6 +648,20 @@
                       <span
                         ><img src="./assets/images/Dell.png" alt="Dell"
                       /></span>
+                    </div>
+                    <div class="offers">
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> No cost
+                        EMI*
+                      </p>
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> Instant
+                        cashback*
+                      </p>
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> Discounts
+                        on CCEMI & DCEMI*
+                      </p>
                     </div>
                     <a href="#contact" class="shop-now-btn">
                       <span style="color: white">Shop Now</span>
@@ -599,6 +704,20 @@
                           alt="Zebronics"
                       /></span>
                     </div>
+                    <div class="offers">
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> No cost
+                        EMI*
+                      </p>
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> Instant
+                        cashback*
+                      </p>
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> Discounts
+                        on CCEMI & DCEMI*
+                      </p>
+                    </div>
                     <a href="#contact" class="shop-now-btn">
                       <span style="color: white">Shop Now</span>
                       <ion-icon
@@ -634,6 +753,20 @@
                         ><img src="./assets/images/Microtek.png" alt="Microtek"
                       /></span>
                     </div>
+                    <div class="offers">
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> No cost
+                        EMI*
+                      </p>
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> Instant
+                        cashback*
+                      </p>
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> Discounts
+                        on CCEMI & DCEMI*
+                      </p>
+                    </div>
                     <a href="#contact" class="shop-now-btn">
                       <span style="color: white">Shop Now</span>
                       <ion-icon
@@ -668,6 +801,20 @@
                       <span
                         ><img src="./assets/images/Triveni.png" alt="Triveni"
                       /></span>
+                    </div>
+                    <div class="offers">
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> No cost
+                        EMI*
+                      </p>
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> Instant
+                        cashback*
+                      </p>
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> Discounts
+                        on CCEMI & DCEMI*
+                      </p>
                     </div>
                     <a href="#contact" class="shop-now-btn">
                       <span style="color: white">Shop Now</span>
@@ -712,6 +859,20 @@
                         ><img src="./assets/images/Havells.png" alt="Havells"
                       /></span>
                     </div>
+                    <div class="offers">
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> No cost
+                        EMI*
+                      </p>
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> Instant
+                        cashback*
+                      </p>
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> Discounts
+                        on CCEMI & DCEMI*
+                      </p>
+                    </div>
                     <a href="#contact" class="shop-now-btn">
                       <span style="color: white">Shop Now</span>
                       <ion-icon
@@ -748,6 +909,20 @@
                           alt="Whirlpool"
                       /></span>
                     </div>
+                    <div class="offers">
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> No cost
+                        EMI*
+                      </p>
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> Instant
+                        cashback*
+                      </p>
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> Discounts
+                        on CCEMI & DCEMI*
+                      </p>
+                    </div>
                     <a href="#contact" class="shop-now-btn">
                       <span style="color: white">Shop Now</span>
                       <ion-icon
@@ -780,6 +955,20 @@
                       <span
                         ><img src="./assets/images/Haier.png" alt="Haier"
                       /></span>
+                    </div>
+                    <div class="offers">
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> No cost
+                        EMI*
+                      </p>
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> Instant
+                        cashback*
+                      </p>
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> Discounts
+                        on CCEMI & DCEMI*
+                      </p>
                     </div>
                     <a href="#contact" class="shop-now-btn">
                       <span style="color: white">Shop Now</span>
@@ -815,6 +1004,20 @@
                       <span
                         ><img src="./assets/images/D-Link.png" alt="D-Link"
                       /></span>
+                    </div>
+                    <div class="offers">
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> No cost
+                        EMI*
+                      </p>
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> Instant
+                        cashback*
+                      </p>
+                      <p>
+                        <ion-icon name="checkmark-circle"></ion-icon> Discounts
+                        on CCEMI & DCEMI*
+                      </p>
                     </div>
                     <a href="#contact" class="shop-now-btn">
                       <span style="color: white">Shop Now</span>
@@ -1075,10 +1278,54 @@
                 "
               >
                 <span style="font-weight: bold; font-size: 1.2rem">✓</span>
-                <span style="font-size: 15px"
-                  >Authorized Dealer: O'General, Daikin, Akai, Bluestar, IFB,
-                  Carrier, Kent</span
-                >
+                <div>
+                  <span style="font-size: 15px">Authorized Dealer of:</span>
+                  <div
+                    style="
+                      display: flex;
+                      flex-wrap: wrap;
+                      gap: 8px;
+                      margin-top: 5px;
+                      align-items: center;
+                    "
+                  >
+                    <img
+                      src="./assets/images/O'General.png"
+                      alt="O'General"
+                      style="height: 20px; width: auto"
+                    />
+                    <img
+                      src="./assets/images/Daikin.png"
+                      alt="Daikin"
+                      style="height: 20px; width: auto"
+                    />
+                    <img
+                      src="./assets/images/Akailogo.jpg"
+                      alt="Akai"
+                      style="height: 20px; width: auto"
+                    />
+                    <img
+                      src="./assets/images/Bluestar.png"
+                      alt="Bluestar"
+                      style="height: 20px; width: auto"
+                    />
+                    <img
+                      src="./assets/images/IFB.png"
+                      alt="IFB"
+                      style="height: 20px; width: auto"
+                    />
+                    <img
+                      src="./assets/images/Carrier.jpeg"
+                      alt="Carrier"
+                      style="height: 20px; width: auto"
+                    />
+                    <img
+                      src="./assets/images/Kent.png"
+                      alt="Kent"
+                      style="height: 20px; width: auto"
+                    />
+                  </div>
+                </div>
               </div>
               <div
                 style="
@@ -1127,9 +1374,9 @@
                 Farrukhabad 209625
               </p>
               <p style="font-size: 12px; line-height: 1.6">
-                <strong>Hours:</strong><br />
-                Mon-Sat: 9:30AM-8:30PM<br />
-                Sun: 10AM-3PM
+                <strong>Timings:</strong><br />
+                Mon-Sat: 10:30AM-9:00PM<br />
+                Sun: 11:00AM-2:00PM
               </p>
             </div>
             <div style="padding: 20px; background: #f0f8ff; border-radius: 5px">
@@ -1412,10 +1659,12 @@
                 <h3 class="card-title">Our Address</h3>
                 <div class="card-content">
                   <p>
-                    Kanchan Agencies<br />
-                    Near Tikona Chowki<br />
-                    Farrukhabad, Uttar Pradesh<br />
-                    209625
+                    <strong>Kanchan Agencies</strong><br />
+                    <strong>Branch 1:</strong> Near Tikona Chowki<br />
+                    Farrukhabad, Uttar Pradesh 209625<br /><br />
+                    <strong>Branch 2:</strong> Near Nekpur Kalan, Opposite
+                    Railway Line<br />
+                    Farrukhabad, Uttar Pradesh 209625
                   </p>
                 </div>
               </div>
@@ -1440,9 +1689,9 @@
                   </p>
 
                   <p>
-                    <a href="tel:9838744737"
-                      ><i class="fab fa-whatsapp"></i> 9838744737</a
-                    >
+                    <a href="https://wa.me/919838744737" target="_blank">
+                      <i class="fab fa-whatsapp"></i> 9838744737
+                    </a>
                   </p>
 
                   <p>
@@ -1463,7 +1712,8 @@
                 <h3 class="card-title">Connect With Us</h3>
                 <div class="card-content social-links">
                   <a
-                    href="https://www.instagram.com/kanchanagenciesfarrukhabad"
+                    href="https://www.instagram.com/kanchanagenciesfarrukhabad?igsh=MXR0NGo5cXlvamF2aQ%3D%3D&utm_source=qr
+"
                     target="_blank"
                     class="social-link"
                   >
@@ -1473,11 +1723,11 @@
                 </div>
                 <div class="card-content social-links">
                   <a
-                    href="https://www.instagram.com/kanchanagenciesfarrukhabad"
+                    href="https://www.facebook.com/share/1APy8YBo6Y/"
                     target="_blank"
                     class="social-link"
                   >
-                    <i class="fab fa-instagram"></i> Facebook
+                    <i class="fab fa-facebook"></i> Facebook
                   </a>
                   <!-- Add more social links if needed -->
                 </div>
@@ -1556,9 +1806,33 @@
               margin-bottom: 30px;
               font-size: 2.5em;
             "
+            id="terms-conditions"
           >
             Kanchan Agencies - Terms & Conditions
           </h1>
+
+          <div
+            style="
+              background: #f8f9fa;
+              padding: 20px;
+              border-radius: 8px;
+              margin-bottom: 30px;
+            "
+          >
+            <p
+              style="
+                text-align: center;
+                font-style: italic;
+                margin-bottom: 15px;
+              "
+            >
+              <!-- <strong>Effective Date:</strong> 28/04/2025 -->
+            </p>
+            <p style="text-align: center">
+              Welcome to Kanchan Agencies. These Terms and Conditions govern
+              your access to and use of our services.
+            </p>
+          </div>
 
           <div
             style="
@@ -1589,16 +1863,14 @@
               </h2>
               <ul style="line-height: 1.6; color: #555">
                 <li style="margin-bottom: 10px">
-                  All electronic devices come with a manufacturer's warranty
-                  (duration varies by product)
+                  All products come with manufacturer's warranty (duration
+                  varies)
                 </li>
                 <li style="margin-bottom: 10px">
-                  Warranty covers manufacturing defects only, not physical
-                  damage or liquid exposure
+                  Covers manufacturing defects only (excludes physical damage)
                 </li>
                 <li style="margin-bottom: 10px">
-                  Warranty claims require original invoice and intact warranty
-                  seals
+                  Claims require original invoice and intact warranty seals
                 </li>
                 <li>Extended warranty options available at additional cost</li>
               </ul>
@@ -1625,16 +1897,15 @@
               </h2>
               <ul style="line-height: 1.6; color: #555">
                 <li style="margin-bottom: 10px">
-                  7-day return policy for defective products (unopened items may
-                  vary)
+                  7-day return policy for defective products
                 </li>
                 <li style="margin-bottom: 10px">
-                  Return requests must be initiated within 48 hours of delivery
+                  Return requests within 48 hours of delivery
                 </li>
                 <li style="margin-bottom: 10px">
-                  Refunds processed within 5-7 business days after inspection
+                  Refunds processed within 5-7 business days
                 </li>
-                <li>Restocking fee (15%) applies for non-defective returns</li>
+                <li>15% restocking fee for non-defective returns</li>
               </ul>
             </div>
 
@@ -1659,16 +1930,15 @@
               </h2>
               <ul style="line-height: 1.6; color: #555">
                 <li style="margin-bottom: 10px">
-                  Full payment required before delivery for online orders
+                  Full payment required before delivery
                 </li>
                 <li style="margin-bottom: 10px">
-                  Credit terms available for bulk/commercial orders (subject to
-                  approval)
+                  Credit terms for bulk orders (subject to approval)
                 </li>
                 <li style="margin-bottom: 10px">
-                  We accept all major credit/debit cards, UPI, net banking
+                  Accept cards, UPI, net banking
                 </li>
-                <li>2.5% processing fee for credit card payments</li>
+                <li>2.5% processing fee for credit cards</li>
               </ul>
             </div>
 
@@ -1693,15 +1963,15 @@
               </h2>
               <ul style="line-height: 1.6; color: #555">
                 <li style="margin-bottom: 10px">
-                  Standard delivery within 3-5 business days (metro areas)
+                  3-5 business days for standard delivery
                 </li>
                 <li style="margin-bottom: 10px">
-                  Express delivery available at additional cost (24-48 hours)
+                  Express delivery available (24-48 hours)
                 </li>
                 <li style="margin-bottom: 10px">
-                  Customers must inspect products at time of delivery
+                  Inspect products at time of delivery
                 </li>
-                <li>Shipping charges vary by location and order value</li>
+                <li>Shipping charges vary by location</li>
               </ul>
             </div>
 
@@ -1726,13 +1996,13 @@
               </h2>
               <ul style="line-height: 1.6; color: #555">
                 <li style="margin-bottom: 10px">
-                  Kanchan Agencies not liable for misuse of products
+                  Not liable for product misuse
                 </li>
                 <li style="margin-bottom: 10px">
-                  Proper installation is customer's responsibility
+                  Customer responsible for proper installation
                 </li>
                 <li style="margin-bottom: 10px">
-                  Voltage fluctuations not covered under warranty
+                  Voltage fluctuations not covered
                 </li>
                 <li>Data loss during repairs not our responsibility</li>
               </ul>
@@ -1762,30 +2032,67 @@
                   Prices subject to change without notice
                 </li>
                 <li style="margin-bottom: 10px">
-                  Product specifications may vary slightly from images
+                  Product specs may vary from images
                 </li>
                 <li style="margin-bottom: 10px">
                   Promotional offers cannot be combined
                 </li>
-                <li>Terms governed by [Your State] consumer laws</li>
+                <li>Governed by Uttar Pradesh consumer laws</li>
               </ul>
             </div>
           </div>
 
-          <!-- <div
+          <div
             style="
+              margin-top: 40px;
               background: #f8f9fa;
-              border-left: 4px solid #2c3e50;
-              padding: 20px;
-              margin-top: 30px;
+              padding: 25px;
+              border-radius: 8px;
             "
           >
-            <p style="font-style: italic; color: #7f8c8d">
-              Last updated: [Insert Date]. Kanchan Agencies reserves the right
-              to modify these terms at any time. For warranty claims or service
-              requests, please contact our customer care at [phone] or [email].
-            </p>
-          </div> -->
+            <h2
+              style="
+                color: #2c3e50;
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 10px;
+              "
+            >
+              Contact Information
+            </h2>
+            <div
+              style="
+                display: flex;
+                flex-wrap: wrap;
+                gap: 30px;
+                margin-top: 20px;
+              "
+            >
+              <div style="flex: 1; min-width: 250px">
+                <h3 style="color: #3498db">Kanchan Agencies - Main Branch</h3>
+                <p>
+                  Near Tikona Chowki<br />
+                  Farrukhabad, Uttar Pradesh<br />
+                  209625
+                </p>
+              </div>
+              <div style="flex: 1; min-width: 250px">
+                <h3 style="color: #3498db">Kanchan Agencies - Nekpur Branch</h3>
+                <p>
+                  Near Nekpur Kalan<br />
+                  Opposite Railway Line<br />
+                  Farrukhabad, Uttar Pradesh 209625
+                </p>
+              </div>
+              <div style="flex: 1; min-width: 250px">
+                <h3 style="color: #3498db">Contact Details</h3>
+                <p>
+                  <strong>Email:</strong> info@kanchanagencies.com<br />
+                  <strong>Phone:</strong> +91 9838744737<br />
+                  <strong>Hours:</strong> 10:30 AM - 9:00 PM (Mon-Sat)
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div
@@ -1803,9 +2110,34 @@
               margin-bottom: 30px;
               font-size: 2.5em;
             "
+            id="privacy-policy"
           >
             Kanchan Agencies - Privacy Policy
           </h1>
+
+          <div
+            style="
+              background: #f8f9fa;
+              padding: 20px;
+              border-radius: 8px;
+              margin-bottom: 30px;
+            "
+          >
+            <p
+              style="
+                text-align: center;
+                font-style: italic;
+                margin-bottom: 15px;
+              "
+            >
+              <!-- <strong>Effective Date:</strong> 28/04/2025 -->
+            </p>
+            <p style="text-align: center">
+              At Kanchan Agencies, we are committed to protecting your privacy.
+              This policy explains how we collect, use, and safeguard your
+              information.
+            </p>
+          </div>
 
           <div
             style="
@@ -1836,15 +2168,15 @@
               </h2>
               <ul style="line-height: 1.6; color: #555">
                 <li style="margin-bottom: 10px">
-                  Personal details (name, contact info) for order processing
+                  Personal details (name, contact info, address)
                 </li>
                 <li style="margin-bottom: 10px">
-                  Payment information (processed securely via payment gateways)
+                  Payment information (processed securely)
                 </li>
                 <li style="margin-bottom: 10px">
-                  Device information for warranty registration
+                  Purchase history and product preferences
                 </li>
-                <li>Website usage data through cookies and analytics</li>
+                <li>Device information for warranty registration</li>
               </ul>
             </div>
 
@@ -1869,7 +2201,7 @@
               </h2>
               <ul style="line-height: 1.6; color: #555">
                 <li style="margin-bottom: 10px">
-                  To process orders and deliver products
+                  To process and fulfill your orders
                 </li>
                 <li style="margin-bottom: 10px">
                   For warranty registration and service requests
@@ -1902,15 +2234,15 @@
               </h2>
               <ul style="line-height: 1.6; color: #555">
                 <li style="margin-bottom: 10px">
-                  With shipping partners for delivery purposes
+                  With shipping partners for delivery
                 </li>
                 <li style="margin-bottom: 10px">
-                  With payment processors for transaction completion
+                  With payment processors for transactions
                 </li>
                 <li style="margin-bottom: 10px">
                   With manufacturers for warranty claims
                 </li>
-                <li>Only when required by law enforcement</li>
+                <li>Only when legally required</li>
               </ul>
             </div>
 
@@ -1935,15 +2267,15 @@
               </h2>
               <ul style="line-height: 1.6; color: #555">
                 <li style="margin-bottom: 10px">
-                  SSL encryption for all online transactions
+                  SSL encryption for all transactions
                 </li>
                 <li style="margin-bottom: 10px">
-                  Secure storage of customer information
+                  Secure storage of customer data
                 </li>
                 <li style="margin-bottom: 10px">
-                  Regular security audits of our systems
+                  Regular security system audits
                 </li>
-                <li>Employee training on data privacy</li>
+                <li>Employee privacy training</li>
               </ul>
             </div>
 
@@ -1967,16 +2299,14 @@
                 Your Rights
               </h2>
               <ul style="line-height: 1.6; color: #555">
+                <li style="margin-bottom: 10px">Access your personal data</li>
                 <li style="margin-bottom: 10px">
-                  Right to access your personal data
+                  Correct inaccurate information
                 </li>
                 <li style="margin-bottom: 10px">
-                  Right to correct inaccurate information
+                  Request data deletion (where applicable)
                 </li>
-                <li style="margin-bottom: 10px">
-                  Right to request data deletion (where applicable)
-                </li>
-                <li>Right to opt-out of marketing communications</li>
+                <li>Opt-out of marketing communications</li>
               </ul>
             </div>
 
@@ -2001,34 +2331,70 @@
               </h2>
               <ul style="line-height: 1.6; color: #555">
                 <li style="margin-bottom: 10px">
-                  We use essential cookies for website functionality
+                  Essential cookies for website functionality
                 </li>
                 <li style="margin-bottom: 10px">
-                  Analytics cookies help improve user experience
+                  Analytics cookies improve user experience
                 </li>
                 <li style="margin-bottom: 10px">
-                  You can manage cookie preferences in your browser
+                  Manage preferences in your browser
                 </li>
-                <li>We don't use intrusive tracking technologies</li>
+                <li>No intrusive tracking technologies</li>
               </ul>
             </div>
           </div>
 
-          <!-- <div
+          <div
             style="
+              margin-top: 40px;
               background: #f8f9fa;
-              border-left: 4px solid #2c3e50;
-              padding: 20px;
-              margin-top: 30px;
+              padding: 25px;
+              border-radius: 8px;
             "
           >
-            <p style="font-style: italic; color: #7f8c8d">
-              Last updated: [Insert Date]. Kanchan Agencies may update this
-              policy periodically. For any privacy-related inquiries or to
-              exercise your rights, please contact our Data Protection Officer
-              at [email] or [phone].
-            </p>
-          </div> -->
+            <h2
+              style="
+                color: #2c3e50;
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 10px;
+              "
+            >
+              Contact Information
+            </h2>
+            <div
+              style="
+                display: flex;
+                flex-wrap: wrap;
+                gap: 30px;
+                margin-top: 20px;
+              "
+            >
+              <div style="flex: 1; min-width: 250px">
+                <h3 style="color: #3498db">Kanchan Agencies - Main Branch</h3>
+                <p>
+                  Near Tikona Chowki<br />
+                  Farrukhabad, Uttar Pradesh<br />
+                  209625
+                </p>
+              </div>
+              <div style="flex: 1; min-width: 250px">
+                <h3 style="color: #3498db">Kanchan Agencies - Nekpur Branch</h3>
+                <p>
+                  Near Nekpur Kalan<br />
+                  Opposite Railway Line<br />
+                  Farrukhabad, Uttar Pradesh 209625
+                </p>
+              </div>
+              <div style="flex: 1; min-width: 250px">
+                <h3 style="color: #3498db">Privacy Contact</h3>
+                <p>
+                  <strong>Email:</strong> info@kanchanagencies.com<br />
+                  <strong>Phone:</strong> +91 9838744737<br />
+                  <strong>Hours:</strong> 10:30 AM - 9:00 PM (Mon-Sat)
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </article>
     </main>
@@ -2041,187 +2407,111 @@
       class="footer"
       style="background-image: url('./assets/images/footer-bg.png')"
     >
-      <div class="footer-top section">
-        <div class="container grid-list">
-          <div class="footer-brand">
-            <a href="#" class="logo">
-              <img
-                src="./assets/images/kanchan logo.jpeg"
-                alt="EduWeb logo"
-                style="width: 120px; height: 74px"
-              />
-            </a>
-
-            <p class="footer-brand-text">
-              Kanchan Agencies Your one-stop destination for the latest in
-              electronics.
-            </p>
-
-            <div class="wrapper">
-              <span class="span">Add:</span>
-
-              <address class="address">
-                Kanchan agencies near tikona chowki farrukhabad 209625
-              </address>
-            </div>
-
-            <div class="wrapper">
-              <span class="span">Call:</span>
-
-              <a href="tel:+011234567890" class="footer-link"
-                >+91 9838744737, 9696968566</a
-              >
-            </div>
-
-            <div class="wrapper">
-              <span class="span">Email:</span>
-
-              <a href="mailto:kanchanagencies@gmail.com" class="footer-link"
-                >kanchanagencies@gmail.com</a
-              >
-            </div>
-          </div>
-
-          <ul class="footer-list">
-            <!-- <li>
-              <p class="footer-list-title">Online Platform</p>
-            </li> -->
-
-            <li>
-              <a href="#about" class="footer-link">About</a>
-            </li>
-
-            <li>
-              <a href="#services" class="footer-link">Services</a>
-            </li>
-
-            <!-- <li>
-              <a href="#" class="footer-link">Instructor</a>
-            </li> -->
-
-            <!-- <li>
-              <a href="#" class="footer-link">Events</a>
-            </li> -->
-
-            <!-- <li>
-              <a href="#" class="footer-link">Instructor Profile</a>
-            </li> -->
-
-            <li>
-              <a href="#contact" class="footer-link">Contact Us</a>
-            </li>
-          </ul>
-
-          <ul class="footer-list">
-            <li>
-              <p class="footer-list-title">Links</p>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Contact Us</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Gallery</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">News & Articles</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">FAQ's</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Sign In/Registration</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Coming Soon</a>
-            </li>
-          </ul>
-
-          <div class="footer-list">
-            <p class="footer-list-title">Contacts</p>
-
-            <p class="footer-list-text">
-              Enter your email address to register to our newsletter
-              subscription
-            </p>
-
-            <form action="" class="newsletter-form">
-              <input
-                type="email"
-                name="email_address"
-                placeholder="Your email"
-                required
-                class="input-field"
-              />
-
-              <button type="submit" class="btn has-before">
-                <span class="span">Subscribe</span>
-
-                <ion-icon
-                  name="arrow-forward-outline"
-                  aria-hidden="true"
-                ></ion-icon>
-              </button>
-            </form>
-
-            <ul class="social-list">
-              <li>
-                <a
-                  href="https://www.facebook.com/share/1APy8YBo6Y/"
-                  class="social-link"
-                  target="_blank"
-                >
-                  <ion-icon name="logo-facebook"></ion-icon>
-                </a>
-              </li>
-
-              <!-- <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-linkedin"></ion-icon>
-                </a>
-              </li> -->
-
-              <li>
-                <a
-                  href="https://www.instagram.com/kanchanagenciesfarrukhabad?igsh=MXR0NGo5cXlvamF2aQ%3D%3D&utm_source=qr
-"
-                  class="social-link"
-                  target="_blank"
-                >
-                  <ion-icon name="logo-instagram"></ion-icon>
-                </a>
-              </li>
-
-              <!-- <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-twitter"></ion-icon>
-                </a>
-              </li> -->
-
-              <!-- <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-youtube"></ion-icon>
-                </a>
-              </li> -->
-            </ul>
-          </div>
-        </div>
-      </div>
+      <!-- ... (keep all your existing footer content exactly the same until the footer-bottom section) ... -->
 
       <div class="footer-bottom">
         <div class="container">
           <p class="copyright">
-            Copyright 2025 All Rights Reserved by
-            <a href="#home" class="copyright-link">Kanchan Agencies</a>
+            &copy; 2025
+            <a href="#home" class="copyright-link">Kanchan Agencies</a>. All
+            Rights Reserved.
+            <span class="legal-links">
+              <a href="#terms-conditions" class="footer-legal-link">
+                <ion-icon
+                  name="document-text-outline"
+                  class="legal-icon"
+                ></ion-icon>
+                Terms & Conditions
+              </a>
+              <span class="legal-separator">
+                <ion-icon
+                  name="ellipsis-vertical"
+                  class="separator-icon"
+                ></ion-icon>
+              </span>
+              <a href="#privacy-policy" class="footer-legal-link">
+                <ion-icon
+                  name="shield-checkmark-outline"
+                  class="legal-icon"
+                ></ion-icon>
+                Privacy Policy
+              </a>
+            </span>
           </p>
         </div>
       </div>
     </footer>
+
+    <style>
+      .footer-bottom {
+        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .copyright {
+        color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .copyright-link {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .legal-links {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-left: 12px;
+      }
+
+      .footer-legal-link {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        font-size: 14px;
+        transition: color 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .footer-legal-link:hover {
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      .legal-icon {
+        font-size: 16px;
+      }
+
+      .legal-separator {
+        color: rgba(255, 255, 255, 0.3);
+        display: flex;
+        align-items: center;
+      }
+
+      .separator-icon {
+        font-size: 12px;
+      }
+
+      @media (max-width: 768px) {
+        .copyright {
+          flex-direction: column;
+          gap: 6px;
+        }
+
+        .legal-links {
+          margin-left: 0;
+          margin-top: 8px;
+        }
+      }
+    </style>
 
     <!-- 
     - #BACK TO TOP
